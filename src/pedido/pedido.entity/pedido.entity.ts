@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
 export class PedidoEntity {
@@ -13,13 +13,16 @@ export class PedidoEntity {
     detalle: string;
 
     @Column()
-    fecha: Date;
-
-    @Column()
     estado: string;
 
     @Column()
     mesero: string;
+
+    @CreateDateColumn()
+    created_at: Date;
+    
+    @UpdateDateColumn()
+    updated_at: Date;
 
 
 }

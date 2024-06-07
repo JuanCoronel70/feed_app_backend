@@ -1,4 +1,4 @@
-import {IsDate, IsNotEmpty, IsNumber, IsString, IsUrl} from 'class-validator';
+import {IsDate, IsNotEmpty, IsNumber, IsString} from 'class-validator';
 
 export class PedidoDto {
 
@@ -9,10 +9,6 @@ export class PedidoDto {
     @IsString()
     @IsNotEmpty()
     readonly detalle: string;
-
-    @IsDate()
-    @IsNotEmpty()
-    readonly fecha: Date;
 
     @IsString()
     @IsNotEmpty()
